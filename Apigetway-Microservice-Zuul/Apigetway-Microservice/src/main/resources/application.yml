@@ -1,0 +1,31 @@
+
+server:
+  port: 8484
+
+spring:
+  application:
+    name: api-getway
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8661/eureka
+  instance:
+    hostname: localhost
+
+zuul:
+  host:
+    connect-timeout-millis: 1000000
+    socket-timeout-millis: 1000000
+  ignored-services: "*"
+  routes:
+    payment-service:
+      path: /payment/**
+      serviceId: payment-service
+      stripPrefix: true
+    order-service:
+      path: /order/**
+      serviceId: order-service
+      stripPrefix: true

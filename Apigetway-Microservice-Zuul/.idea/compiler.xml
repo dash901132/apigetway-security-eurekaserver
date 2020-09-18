@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Order-Microservice" />
+        <module name="Apigetway-Microservice" />
+        <module name="Apigetway-Microservice-Zuul" />
+        <module name="Eureka-Server" />
+        <module name="Payment-Microservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Apigetway-Microservice" target="1.8" />
+      <module name="Apigetway-Microservice-Zuul" target="1.8" />
+      <module name="Eureka-Server" target="1.8" />
+      <module name="Order-Microservice" target="1.8" />
+      <module name="Payment-Microservice" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Apigetway-Microservice" options="-parameters" />
+      <module name="Apigetway-Microservice-Zuul" options="-parameters" />
+      <module name="Eureka-Server" options="-parameters" />
+      <module name="Order-Microservice" options="-parameters" />
+      <module name="Payment-Microservice" options="-parameters" />
+    </option>
+  </component>
+</project>
